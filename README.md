@@ -24,9 +24,11 @@ uv run --with-requirements requirements.txt \
 OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1 \
 uv run --with-requirements requirements.txt python analysis/run.py
 
-# Regenerate the three quantitative figures from that result.
+# Regenerate the classical-study figures from that result.
 npm ci
 npm run figures
+
+# Plot the separately sourced example from Meta's paper.
 npm run paper-figure
 ```
 
