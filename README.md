@@ -1,12 +1,12 @@
 # Classical LTV as an experiment metric
 
-Reproduction code for **What Does Meta Add to a Classical LTV Model?** by Luca Fiaschi.
+Supporting code and figures for **LTV Models and the Value of Experimental Training** by Luca Fiaschi.
 
 [Read the article preview](https://deploy-preview-90--capable-souffle-433eb5.netlify.app/blog/posts/ltv-experiment-surrogates/)
 
 The example fits one BG/NBD + Gamma-Gamma model to ordinary transaction histories, then uses its predictions in a randomized experiment. A four-week supplier rebate and a continuing rebate create identical early RFM histories but different future margin. The study examines what historical experiments reveal about that missing duration information.
 
-The Meta paper motivates the identification question. This repository does not fit or benchmark its two-stage estimator.
+The Meta paper motivates the discussion of experimental training. These simulations check a classical forecast and a missing-duration example; they do not fit or benchmark Meta's two-stage estimator.
 
 ## Reproduce
 
@@ -76,6 +76,11 @@ The model diagram and its prompt are checked in, so regenerating it is not requi
 
 ```sh
 python scripts/generate-diagram.py
+
+# Generate the experimental-training workflow from its own prompt.
+python scripts/generate-diagram.py \
+  --prompt figures/experimental-training-prompt.txt \
+  --output figures/experimental-training-generated
 ```
 
 The script uses the Gemini image model recorded for the original figure; `--model` can select an available model. It saves a new `classical-model-generated` image with the extension matching the returned format. Generated images can vary. Inspect their labels and arrows before publication. No API key is needed for the simulation or quantitative figures.

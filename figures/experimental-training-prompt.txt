@@ -1,0 +1,19 @@
+Generate an entire clean scientific workflow diagram directly. Portrait9:16, white background, navy #172033 text, blue #002fa7 thin box outlines and arrows. Very large humanist sans-serif labels; every label must be readable when the image is318px wide. Use short lines, at least100px type if canvas width1536px. No gradients, shadows, decorative icons or small footnotes.
+
+Two stacked sections separated by generous whitespace. Exact content:
+
+Top section heading: "Past experiments: training"
+Box1: "Assignment Z" on first line, "+ prior history W" on second line.
+Down arrow.
+Box2: "Predict early features" on first line, "X̂ = h(Z, W)" on second line.
+Down arrow.
+Box3: "Predicted X̂ + W" on first line, "Fit g to future outcome Y" on second line.
+
+Bottom section heading: "New experiment: scoring"
+Box4: "Observed early X" on first line, "+ prior history W" on second line.
+Down arrow.
+Box5: "Apply the frozen g"
+Down arrow.
+Box6: "Forecast future outcome"
+
+The top third box means Y supplies labels for fitting g, with predicted Xhat and W as inputs. At scoring g receives actual X and W. Keep all six boxes separate. Do not connect the final training box to the observed-features box as a data arrow; use an optional thin dashed artifact-reuse arrow from training g to scoring g only if it fits without crossings. Do not add assignment Z to scoring, do not predict a treatment effect directly, do not show future Y as a scoring input. No other labels or prose. Keep text very large and uncut; split lines if necessary rather than shrinking.
