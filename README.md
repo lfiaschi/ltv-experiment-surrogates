@@ -27,6 +27,7 @@ uv run --with-requirements requirements.txt python analysis/run.py
 # Regenerate the three quantitative figures from that result.
 npm ci
 npm run figures
+npm run paper-figure
 ```
 
 The full run fits five independent simulations, each with 500,000 training customers, 200,000 calibration customers and 50,000 experimental customers. Five historical rebate sizes use another 20,000 customers each. `analysis/run.py --help` lists smaller sample sizes for quick checks. The final figures require the full configuration.
@@ -42,6 +43,7 @@ Results write to `results/classical-results.json`. An interrupted run leaves a s
 | [`analysis/test_model.py`](analysis/test_model.py) | Process, survival, analytic-value and observable-reconstruction checks |
 | [`results/classical-results.json`](results/classical-results.json) | All five fitted parameter sets, calibration groups, examples and effect estimates |
 | [`scripts/generate-figures.mjs`](scripts/generate-figures.mjs) | Deterministic SVG/PNG charts from the results |
+| [`scripts/generate-meta-holdout.mjs`](scripts/generate-meta-holdout.mjs) | Plot the published first holdout from Meta’s Table 4 |
 | [`scripts/generate-diagram.py`](scripts/generate-diagram.py) | Optional direct Gemini image generation for the model diagram |
 | [`figures/`](figures/) | Published figures, diagram prompt and figure specifications |
 

@@ -8,7 +8,8 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "figures": "node scripts/generate-figures.mjs"
+    "figures": "node scripts/generate-figures.mjs",
+    "paper-figure": "node scripts/generate-meta-holdout.mjs"
   },
   "dependencies": {
     "sharp": "0.35.5"

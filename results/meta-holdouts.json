@@ -1,0 +1,13 @@
+{
+  "source": "Day et al., Case Study: Learning Robust, Long-run Surrogate Metrics with Modeling and Instrumental Variables, Table 4",
+  "doi": "https://doi.org/10.1145/3770854.3783922",
+  "units": "percent",
+  "uncertainty_intervals": "not reported in the source table",
+  "rows": [
+    {"holdout": 1, "actual": 0.283, "two_stage": 0.245, "direct": -0.100},
+    {"holdout": 2, "actual": 0.191, "two_stage": 0.060, "direct": -0.039},
+    {"holdout": 3, "actual": 0.074, "two_stage": 0.169, "direct": -0.060},
+    {"holdout": 4, "actual": 0.030, "two_stage": 0.000, "direct": -0.014},
+    {"holdout": 5, "actual": 0.000, "two_stage": -0.019, "direct": -0.016}
+  ]
+}
