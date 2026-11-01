@@ -1,0 +1,13 @@
+Create a clean, rigorous scientific diagram for a personal technical blog. Entire composition directly generated, portrait 4:5, pure white background, navy #172033 text, thin deep blue #002fa7 outlines, subtle orange #a94924 only for the final value. Humanist sans serif, very large readable type. No decoration, icons, gradients, shadows or footers. All labels must be readable when the whole image is 318px wide. Minimum type 110px at a1536px canvas width. Use generous margins.
+
+Exact content and relationships:
+Top heading: "A classical LTV forecast"
+Top centered box with two lines: "Customer history" / "Recency · Frequency" / "Margin · Age"
+An arrow splits to TWO separate side-by-side component boxes of equal size:
+Left box: "BG/NBD" / "Future orders"
+Right box: "Gamma-Gamma" / "Margin/order"
+Two clear arrows from these two boxes converge at a small multiplication symbol ×, then one down arrow leads to a large final centered box:
+"Predicted future value"
+Bottom line with enough whitespace: "Fit on history." / "Score new experiments."
+
+Each model label may occupy up to3lines to keep large type. The component boxes MUST remain distinct; the BG/NBD box predicts purchases only, the Gamma-Gamma box predicts margin only. Do not introduce treatment assignment, model training labels, causal effects, future observed outcomes, or extra variables. Do not add mathematical amounts or a graph. Make all text exact and uncut, and keep the two converging arrows clearly visible.

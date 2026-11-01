@@ -1,0 +1,1696 @@
+{
+  "configuration": {
+    "version": 3,
+    "repeats": 5,
+    "train_n": 500000,
+    "calibration_n": 200000,
+    "test_n": 50000,
+    "historical_n": 20000,
+    "past_weeks": 12.0,
+    "early_weeks": 4.0,
+    "future_weeks": 52,
+    "uplift": 0.2,
+    "historical_doses": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "monthly_discount": 0.01,
+    "bg_truth": {
+      "r": 0.8,
+      "alpha": 4.0,
+      "a": 2.5,
+      "b": 8.0
+    },
+    "gg_truth": {
+      "p": 6.0,
+      "q": 4.0,
+      "v": 15.0
+    },
+    "calibration_bias_tolerance": 0.03
+  },
+  "runs": [
+    {
+      "rep": 0,
+      "bg_parameters": {
+        "r": 0.7980270177211449,
+        "alpha": 3.990522837602282,
+        "a": 2.4704222645409892,
+        "b": 7.828357277080344
+      },
+      "gg_parameters": {
+        "p": 6.039594735896224,
+        "q": 4.001216591047017,
+        "v": 14.899291608135497
+      },
+      "calibration": {
+        "n": 200000,
+        "prediction": 51.23858585540528,
+        "expected": 50.91087216159234,
+        "realized": 51.05241626196279,
+        "relative_bias": 0.006437008047569304,
+        "bins": [
+          {
+            "prediction": 8.299919520188608,
+            "expected": 8.444673748463156,
+            "realized": 8.739095677730885,
+            "n": 20000
+          },
+          {
+            "prediction": 17.152286460664236,
+            "expected": 16.79780245699836,
+            "realized": 16.65036685490818,
+            "n": 20000
+          },
+          {
+            "prediction": 26.289180789881602,
+            "expected": 25.742367438334796,
+            "realized": 25.53478463666475,
+            "n": 20000
+          },
+          {
+            "prediction": 36.17464824797767,
+            "expected": 36.21762714564242,
+            "realized": 35.8668847610584,
+            "n": 20000
+          },
+          {
+            "prediction": 39.4052896381104,
+            "expected": 39.5004999606224,
+            "realized": 39.86854564972897,
+            "n": 20000
+          },
+          {
+            "prediction": 39.4052896381104,
+            "expected": 39.17603487765034,
+            "realized": 39.61530658232008,
+            "n": 20000
+          },
+          {
+            "prediction": 40.85075118296475,
+            "expected": 40.744117948426215,
+            "realized": 40.57124351465667,
+            "n": 20000
+          },
+          {
+            "prediction": 53.697947649475935,
+            "expected": 53.48313089465508,
+            "realized": 53.24803294971087,
+            "n": 20000
+          },
+          {
+            "prediction": 78.2899787327094,
+            "expected": 77.59653832483096,
+            "realized": 77.25489830964477,
+            "n": 20000
+          },
+          {
+            "prediction": 172.82056669396977,
+            "expected": 171.4059288202997,
+            "realized": 173.17500368320438,
+            "n": 20000
+          }
+        ]
+      },
+      "experiment": {
+        "n": 50000,
+        "uplift": 0.2,
+        "n_treated": 24947,
+        "frequency_contrast": -0.013413842687174604,
+        "recency_contrast": 0.02997665848272657,
+        "monetary_contrast": 0.6791781515512625,
+        "paired_early_monetary_change": 0.698283542917124,
+        "early_gain_per_treated": 1.8507927966926674,
+        "baseline_future_value": 52.067894338720386,
+        "temporary": {
+          "expected_effect": 0.0,
+          "realized_effect": -0.07685778703154966,
+          "se": 1.0991935069800465
+        },
+        "continuing": {
+          "expected_effect": 10.413578867744079,
+          "realized_effect": 10.360632504240492,
+          "se": 1.2169971283984364
+        },
+        "rfm_identical_between_durations": true,
+        "score_effect": 1.4636537083469534,
+        "paired_score_effect": 1.691673286001559,
+        "score_se": 0.5242323093599834,
+        "baseline_score_imbalance": -0.20906854374202766,
+        "contract_temporary_effect": -0.20906854374202766,
+        "contract_continuing_effect": 10.080481250319814,
+        "paired_contract_continuing_effect": 10.31050097096731,
+        "paired_contract_temporary_effect": 0.0,
+        "example_histories": [
+          {
+            "frequency": 3.0,
+            "recency": 13.17082568844242,
+            "age": 16.0,
+            "base_monetary": 21.785152864351364,
+            "early_orders": 1.0,
+            "changed_monetary": 22.320690757885018,
+            "base_ltv": 70.17629659924242,
+            "changed_ltv": 71.58115049122529
+          },
+          {
+            "frequency": 6.0,
+            "recency": 15.421331435523637,
+            "age": 16.0,
+            "base_monetary": 14.892147016919509,
+            "early_orders": 3.0,
+            "changed_monetary": 16.502552423635155,
+            "base_ltv": 86.0433058663333,
+            "changed_ltv": 94.01808087858815
+          },
+          {
+            "frequency": 3.0,
+            "recency": 14.21693786593874,
+            "age": 16.0,
+            "base_monetary": 18.33803619316485,
+            "early_orders": 2.0,
+            "changed_monetary": 20.51428240614595,
+            "base_ltv": 65.19830487781799,
+            "changed_ltv": 71.28673272007775
+          },
+          {
+            "frequency": 3.0,
+            "recency": 15.997912768543209,
+            "age": 16.0,
+            "base_monetary": 20.66548893696353,
+            "early_orders": 2.0,
+            "changed_monetary": 23.872034255008003,
+            "base_ltv": 77.8389921028513,
+            "changed_ltv": 87.57662630350217
+          },
+          {
+            "frequency": 4.0,
+            "recency": 15.13160092935658,
+            "age": 16.0,
+            "base_monetary": 12.825033879762572,
+            "early_orders": 2.0,
+            "changed_monetary": 14.06522883845243,
+            "base_ltv": 59.808874290008816,
+            "changed_ltv": 64.29076590740159
+          }
+        ],
+        "value_curve": [
+          0.0,
+          0.41767549073313126,
+          0.8168702070026774,
+          1.1989208034504484,
+          1.5650271018504878,
+          1.9162700882956678,
+          2.253627057160243,
+          2.5779844246951136,
+          2.890148627587231,
+          3.1908554385231334,
+          3.4807779658751907,
+          3.7605335537104283,
+          4.030689758138058,
+          4.2917695441060015,
+          4.544255821271846,
+          4.78859541709893,
+          5.0252025687860655,
+          5.254462002201576,
+          5.476731655019799,
+          5.692345092253606,
+          5.901613654952172,
+          6.104828376683824,
+          6.3022616973087064,
+          6.494168999273587,
+          6.680789988078924,
+          6.8623499355534525,
+          7.039060802025273,
+          7.211122251320795,
+          7.378722570688338,
+          7.54203950617892,
+          7.70124102267862,
+          7.856485996639242,
+          8.007924848566688,
+          8.155700121475135,
+          8.299947010778874,
+          8.440793850455604,
+          8.578362559760501,
+          8.712769054287492,
+          8.844123624752639,
+          8.97253128650576,
+          9.098092102453052,
+          9.220901481789484,
+          9.341050456689537,
+          9.458625938884301,
+          9.573710957857939,
+          9.68638488222381,
+          9.796723625687385,
+          9.90479983886687,
+          10.01068308812132,
+          10.114440022427765,
+          10.216134529252425,
+          10.31582788027456,
+          10.413578867744079
+        ]
+      },
+      "historical": [
+        {
+          "n": 20000,
+          "uplift": 0.05,
+          "n_treated": 9973,
+          "frequency_contrast": 0.019943535388373013,
+          "recency_contrast": 0.07525932547530889,
+          "monetary_contrast": 0.44304731860288626,
+          "paired_early_monetary_change": 0.17551788148634512,
+          "early_gain_per_treated": 0.4762972004300614,
+          "baseline_future_value": 51.68420312408953,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": 2.7763847454748074,
+            "se": 1.7094275897961917
+          },
+          "continuing": {
+            "expected_effect": 2.5842101562044766,
+            "realized_effect": 5.394470016182751,
+            "se": 1.7603593158998103
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.1,
+          "n_treated": 10043,
+          "frequency_contrast": -0.05136445972886028,
+          "recency_contrast": -0.10577722662002031,
+          "monetary_contrast": 0.28394975069559436,
+          "paired_early_monetary_change": 0.34915065142817464,
+          "early_gain_per_treated": 0.9118451008612942,
+          "baseline_future_value": 51.09360622668902,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -1.7561052765480767,
+            "se": 1.604228261498053
+          },
+          "continuing": {
+            "expected_effect": 5.109360622668902,
+            "realized_effect": 3.238624796497163,
+            "se": 1.680868395969845
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.2,
+          "n_treated": 10048,
+          "frequency_contrast": 0.03777463032748263,
+          "recency_contrast": 0.09918240062543582,
+          "monetary_contrast": 0.6367375387271075,
+          "paired_early_monetary_change": 0.6734424449344276,
+          "early_gain_per_treated": 1.8422679108134572,
+          "baseline_future_value": 51.821581011088156,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -0.03930181869861116,
+            "se": 1.763360774269684
+          },
+          "continuing": {
+            "expected_effect": 10.364316202217632,
+            "realized_effect": 10.40614997242082,
+            "se": 1.943096085006076
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.3,
+          "n_treated": 9883,
+          "frequency_contrast": -0.039055746341116526,
+          "recency_contrast": -0.07863566599682148,
+          "monetary_contrast": 1.3143457809362467,
+          "paired_early_monetary_change": 1.062170236912365,
+          "early_gain_per_treated": 2.8499610616322353,
+          "baseline_future_value": 52.16883017143518,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": 1.7652543259630349,
+            "se": 1.759558321901322
+          },
+          "continuing": {
+            "expected_effect": 15.650649051430554,
+            "realized_effect": 17.811711060261423,
+            "se": 2.0560994937818187
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.4,
+          "n_treated": 10041,
+          "frequency_contrast": -0.008622464943635721,
+          "recency_contrast": -0.06756212901306213,
+          "monetary_contrast": 1.4040124739935038,
+          "paired_early_monetary_change": 1.3626353284747368,
+          "early_gain_per_treated": 3.5479664883480897,
+          "baseline_future_value": 50.68958905935813,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -1.3985756759811707,
+            "se": 1.6803643142768665
+          },
+          "continuing": {
+            "expected_effect": 20.27583562374325,
+            "realized_effect": 18.40741168155718,
+            "se": 2.0327644484580674
+          },
+          "rfm_identical_between_durations": true
+        }
+      ]
+    },
+    {
+      "rep": 1,
+      "bg_parameters": {
+        "r": 0.8039374467351653,
+        "alpha": 4.01517200597942,
+        "a": 2.4652783792209436,
+        "b": 7.90553225226565
+      },
+      "gg_parameters": {
+        "p": 6.018135843131767,
+        "q": 3.985761147953461,
+        "v": 14.879839624098064
+      },
+      "calibration": {
+        "n": 200000,
+        "prediction": 52.007056044375396,
+        "expected": 51.759202348033234,
+        "realized": 51.96324424833732,
+        "relative_bias": 0.00478859188508296,
+        "bins": [
+          {
+            "prediction": 8.443756645369255,
+            "expected": 8.355263583685408,
+            "realized": 8.418502828474754,
+            "n": 20000
+          },
+          {
+            "prediction": 17.397325405346148,
+            "expected": 17.48484127293641,
+            "realized": 17.551102515528857,
+            "n": 20000
+          },
+          {
+            "prediction": 26.691248783586104,
+            "expected": 26.89164184160008,
+            "realized": 26.636707962479083,
+            "n": 20000
+          },
+          {
+            "prediction": 36.558680794958505,
+            "expected": 36.08516360925485,
+            "realized": 36.10973124952299,
+            "n": 20000
+          },
+          {
+            "prediction": 39.743582023839046,
+            "expected": 39.925640357675086,
+            "realized": 40.02556143367351,
+            "n": 20000
+          },
+          {
+            "prediction": 39.743582023839046,
+            "expected": 39.62670620037301,
+            "realized": 39.67646007532788,
+            "n": 20000
+          },
+          {
+            "prediction": 41.37481666117413,
+            "expected": 41.499750551619115,
+            "realized": 41.23871910694941,
+            "n": 20000
+          },
+          {
+            "prediction": 54.582146333830714,
+            "expected": 54.043826786404104,
+            "realized": 53.61486201332039,
+            "n": 20000
+          },
+          {
+            "prediction": 79.57380676054521,
+            "expected": 79.22483606773193,
+            "realized": 80.11980928410219,
+            "n": 20000
+          },
+          {
+            "prediction": 175.9616150112657,
+            "expected": 174.45435320905244,
+            "realized": 176.24098601399413,
+            "n": 20000
+          }
+        ]
+      },
+      "experiment": {
+        "n": 50000,
+        "uplift": 0.2,
+        "n_treated": 25245,
+        "frequency_contrast": -0.00043581785594692946,
+        "recency_contrast": -0.013447773262119433,
+        "monetary_contrast": 0.7438095351268892,
+        "paired_early_monetary_change": 0.6990844148104315,
+        "early_gain_per_treated": 1.8628669707038694,
+        "baseline_future_value": 52.537457881335776,
+        "temporary": {
+          "expected_effect": 0.0,
+          "realized_effect": 0.2712053588145551,
+          "se": 1.1083073031404997
+        },
+        "continuing": {
+          "expected_effect": 10.507491576267157,
+          "realized_effect": 10.747094617879867,
+          "se": 1.2110540303753625
+        },
+        "rfm_identical_between_durations": true,
+        "score_effect": 2.317545517807666,
+        "paired_score_effect": 1.689461674082234,
+        "score_se": 0.5144060207613529,
+        "baseline_score_imbalance": 0.6243218029587254,
+        "contract_temporary_effect": 0.6243218029587254,
+        "contract_continuing_effect": 11.073472928633016,
+        "paired_contract_continuing_effect": 10.387330780745332,
+        "paired_contract_temporary_effect": 0.0,
+        "example_histories": [
+          {
+            "frequency": 3.0,
+            "recency": 13.743044101332247,
+            "age": 16.0,
+            "base_monetary": 52.784203246835084,
+            "early_orders": 1.0,
+            "changed_monetary": 56.91027785961618,
+            "base_ltv": 158.35537960633607,
+            "changed_ltv": 169.67057108439164
+          },
+          {
+            "frequency": 1.0,
+            "recency": 15.900377400146343,
+            "age": 16.0,
+            "base_monetary": 26.00690291588913,
+            "early_orders": 1.0,
+            "changed_monetary": 31.20828349906695,
+            "base_ltv": 53.531430286011734,
+            "changed_ltv": 60.34139666587403
+          },
+          {
+            "frequency": 3.0,
+            "recency": 15.800647837115687,
+            "age": 16.0,
+            "base_monetary": 10.6994185569987,
+            "early_orders": 2.0,
+            "changed_monetary": 11.997082659327999,
+            "base_ltv": 47.508538079919106,
+            "changed_ltv": 51.44548724951817
+          },
+          {
+            "frequency": 3.0,
+            "recency": 13.030254536967076,
+            "age": 16.0,
+            "base_monetary": 10.314338435094141,
+            "early_orders": 2.0,
+            "changed_monetary": 11.481053219588615,
+            "base_ltv": 39.98757137471758,
+            "changed_ltv": 43.041991977109866
+          },
+          {
+            "frequency": 3.0,
+            "recency": 14.202295561938783,
+            "age": 16.0,
+            "base_monetary": 10.637719904424548,
+            "early_orders": 1.0,
+            "changed_monetary": 11.41686133107301,
+            "base_ltv": 43.919890642468516,
+            "changed_ltv": 46.11379614572747
+          }
+        ],
+        "value_curve": [
+          0.0,
+          0.4215231938492874,
+          0.8244545837759634,
+          1.2101166779405692,
+          1.579701040482859,
+          1.9342847146441622,
+          2.274844207405648,
+          2.602267443103188,
+          2.9173640195909467,
+          3.220874040824036,
+          3.5134757513777473,
+          3.795792159164507,
+          4.068396800658731,
+          4.331818776867975,
+          4.58654716695839,
+          4.833034908944173,
+          5.071702222456584,
+          5.302939636734257,
+          5.5271106771538205,
+          5.744554255470345,
+          5.955586802156147,
+          6.160504173567399,
+          6.359583361931243,
+          6.553084032169387,
+          6.741249906225608,
+          6.924310012736469,
+          7.1024798174888835,
+          7.2759622480726875,
+          7.444948624402056,
+          7.609619505297292,
+          7.770145460048191,
+          7.926687772788331,
+          8.07939908656856,
+          8.228423993204666,
+          8.37389957426953,
+          8.515955897987693,
+          8.654716476257068,
+          8.790298685556797,
+          8.922814155092805,
+          9.052369125174923,
+          9.1790647785052,
+          9.302997546779908,
+          9.424259394763153,
+          9.542938083773555,
+          9.659117416333451,
+          9.772877463559707,
+          9.884294776723397,
+          9.993442584270419,
+          10.100390975474236,
+          10.20520707178395,
+          10.307955186834008,
+          10.408696975995042,
+          10.507491576267157
+        ]
+      },
+      "historical": [
+        {
+          "n": 20000,
+          "uplift": 0.05,
+          "n_treated": 9945,
+          "frequency_contrast": -0.008763765103894317,
+          "recency_contrast": -0.0905095425050586,
+          "monetary_contrast": -0.3617879469253822,
+          "paired_early_monetary_change": 0.17331978190670444,
+          "early_gain_per_treated": 0.4655958183165654,
+          "baseline_future_value": 52.16487215604127,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": 0.02713513219798358,
+            "se": 1.730157376866664
+          },
+          "continuing": {
+            "expected_effect": 2.6082436078020637,
+            "realized_effect": 2.6111746179192608,
+            "se": 1.7720980511830016
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.1,
+          "n_treated": 10036,
+          "frequency_contrast": 0.009279120257398521,
+          "recency_contrast": 0.008049912080305255,
+          "monetary_contrast": 0.40724031871478417,
+          "paired_early_monetary_change": 0.35504726867464287,
+          "early_gain_per_treated": 0.937787549143171,
+          "baseline_future_value": 52.5694854862472,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": 0.1431084385661876,
+            "se": 1.7456265196593006
+          },
+          "continuing": {
+            "expected_effect": 5.25694854862472,
+            "realized_effect": 5.276187863814954,
+            "se": 1.8221613928579428
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.2,
+          "n_treated": 9902,
+          "frequency_contrast": -0.03373233965390021,
+          "recency_contrast": -0.10998909052877259,
+          "monetary_contrast": 0.3185200113983946,
+          "paired_early_monetary_change": 0.7166329517682646,
+          "early_gain_per_treated": 1.929093250060499,
+          "baseline_future_value": 52.27772492590571,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": 2.382525641517624,
+            "se": 1.8233698588592808
+          },
+          "continuing": {
+            "expected_effect": 10.455544985181142,
+            "realized_effect": 13.107768824175984,
+            "se": 2.001791319996683
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.3,
+          "n_treated": 9894,
+          "frequency_contrast": -0.02449581234947562,
+          "recency_contrast": 0.09219511686501747,
+          "monetary_contrast": 1.240668776313857,
+          "paired_early_monetary_change": 1.0416266145027937,
+          "early_gain_per_treated": 2.789550383275309,
+          "baseline_future_value": 52.285325963593685,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": 1.4956050309055442,
+            "se": 1.7522268065806426
+          },
+          "continuing": {
+            "expected_effect": 15.685597789078106,
+            "realized_effect": 17.60260728163599,
+            "se": 2.0531292573303883
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.4,
+          "n_treated": 10065,
+          "frequency_contrast": 0.007816630252628132,
+          "recency_contrast": 0.01614078950341824,
+          "monetary_contrast": 1.8475409996725816,
+          "paired_early_monetary_change": 1.4248829828775873,
+          "early_gain_per_treated": 3.936638679622567,
+          "baseline_future_value": 51.73119984866645,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": 0.5048419585056863,
+            "se": 1.7843645901680205
+          },
+          "continuing": {
+            "expected_effect": 20.69247993946658,
+            "realized_effect": 21.51797605019359,
+            "se": 2.150302448138354
+          },
+          "rfm_identical_between_durations": true
+        }
+      ]
+    },
+    {
+      "rep": 2,
+      "bg_parameters": {
+        "r": 0.7986750362064617,
+        "alpha": 3.996005158863814,
+        "a": 2.3768769126244496,
+        "b": 7.573437741618921
+      },
+      "gg_parameters": {
+        "p": 6.008827991051305,
+        "q": 4.019718317176658,
+        "v": 15.056293557592678
+      },
+      "calibration": {
+        "n": 200000,
+        "prediction": 51.93624368110433,
+        "expected": 51.57495557770532,
+        "realized": 51.656753261515526,
+        "relative_bias": 0.0070051074082784215,
+        "bins": [
+          {
+            "prediction": 8.483935213039251,
+            "expected": 8.678680380653613,
+            "realized": 8.323025163771588,
+            "n": 20000
+          },
+          {
+            "prediction": 17.44044358207897,
+            "expected": 17.632447782778748,
+            "realized": 17.819959113836386,
+            "n": 20000
+          },
+          {
+            "prediction": 26.50703152025156,
+            "expected": 25.78950685394914,
+            "realized": 25.713109340640326,
+            "n": 20000
+          },
+          {
+            "prediction": 36.32664929214729,
+            "expected": 36.352889651895346,
+            "realized": 36.59878478864811,
+            "n": 20000
+          },
+          {
+            "prediction": 39.489572634734714,
+            "expected": 39.80317023516861,
+            "realized": 40.28511104086349,
+            "n": 20000
+          },
+          {
+            "prediction": 39.489572634734714,
+            "expected": 39.6410448169887,
+            "realized": 39.05448185046898,
+            "n": 20000
+          },
+          {
+            "prediction": 41.15109648772823,
+            "expected": 41.19032106081593,
+            "realized": 41.177337559643384,
+            "n": 20000
+          },
+          {
+            "prediction": 54.472484831316606,
+            "expected": 53.90701517768742,
+            "realized": 54.12355585376506,
+            "n": 20000
+          },
+          {
+            "prediction": 79.71524470939366,
+            "expected": 79.89270336750427,
+            "realized": 79.97810144924512,
+            "n": 20000
+          },
+          {
+            "prediction": 176.28640590561844,
+            "expected": 172.86177644961137,
+            "realized": 173.4940664542728,
+            "n": 20000
+          }
+        ]
+      },
+      "experiment": {
+        "n": 50000,
+        "uplift": 0.2,
+        "n_treated": 25008,
+        "frequency_contrast": -0.021336322184839496,
+        "recency_contrast": -0.010196340918669833,
+        "monetary_contrast": 0.7711325227167016,
+        "paired_early_monetary_change": 0.6949970951761966,
+        "early_gain_per_treated": 1.8979736113506378,
+        "baseline_future_value": 50.88576950055072,
+        "temporary": {
+          "expected_effect": 0.0,
+          "realized_effect": 0.4794138682854978,
+          "se": 1.0131369245390274
+        },
+        "continuing": {
+          "expected_effect": 10.177153900110145,
+          "realized_effect": 10.626485582336215,
+          "se": 1.1240222726426896
+        },
+        "rfm_identical_between_durations": true,
+        "score_effect": 2.5194770194348806,
+        "paired_score_effect": 1.7020063705821602,
+        "score_se": 0.5505639687946873,
+        "baseline_score_imbalance": 0.7869716720233839,
+        "contract_temporary_effect": 0.7869716720233839,
+        "contract_continuing_effect": 11.294025000176383,
+        "paired_contract_continuing_effect": 10.428381344044173,
+        "paired_contract_temporary_effect": 0.0,
+        "example_histories": [
+          {
+            "frequency": 1.0,
+            "recency": 12.613290588172596,
+            "age": 16.0,
+            "base_monetary": 10.882669465569057,
+            "early_orders": 1.0,
+            "changed_monetary": 13.059203358682868,
+            "base_ltv": 30.90480149844549,
+            "changed_ltv": 33.49801803764398
+          },
+          {
+            "frequency": 1.0,
+            "recency": 12.692189227509536,
+            "age": 16.0,
+            "base_monetary": 12.373470832630543,
+            "early_orders": 1.0,
+            "changed_monetary": 14.848164999156651,
+            "base_ltv": 32.76574210830002,
+            "changed_ltv": 35.72184445405003
+          },
+          {
+            "frequency": 3.0,
+            "recency": 14.7865507275826,
+            "age": 16.0,
+            "base_monetary": 9.346546143299953,
+            "early_orders": 2.0,
+            "changed_monetary": 10.717916980722899,
+            "base_ltv": 41.85540217096365,
+            "changed_ltv": 45.8510886739863
+          },
+          {
+            "frequency": 4.0,
+            "recency": 15.101932492977184,
+            "age": 16.0,
+            "base_monetary": 29.622998928067716,
+            "early_orders": 2.0,
+            "changed_monetary": 31.977774343731568,
+            "base_ltv": 122.13431124799986,
+            "changed_ltv": 130.7483900986745
+          },
+          {
+            "frequency": 2.0,
+            "recency": 15.98929292105954,
+            "age": 16.0,
+            "base_monetary": 27.814463659628714,
+            "early_orders": 1.0,
+            "changed_monetary": 31.353959200468488,
+            "base_ltv": 79.40197448623557,
+            "changed_ltv": 87.35393194329849
+          }
+        ],
+        "value_curve": [
+          0.0,
+          0.4119202832660331,
+          0.8052695546058664,
+          1.181398924942859,
+          1.541523498182897,
+          1.8867397663934782,
+          2.218040313246105,
+          2.5363263137000858,
+          2.842418216854031,
+          3.137064921194754,
+          3.4209516912396776,
+          3.694707017496191,
+          3.9589085845864718,
+          4.21408848296653,
+          4.460737776155534,
+          4.699310516471983,
+          4.930227286951627,
+          5.153878334638723,
+          5.370626350213399,
+          5.580808940491461,
+          5.784740833356252,
+          5.9827158488786,
+          6.175008665531528,
+          6.361876406337419,
+          6.543560066357803,
+          6.7202858000376695,
+          6.892266084457096,
+          7.05970077244924,
+          7.222778047755567,
+          7.381675292857128,
+          7.536559878804517,
+          7.687589885234935,
+          7.834914757785133,
+          7.978675909260311,
+          8.119007270182378,
+          8.256035793699636,
+          8.389881919280592,
+          8.520659999125542,
+          8.64847869080114,
+          8.77344131922688,
+          8.895646210811561,
+          9.015187002246043,
+          9.132152926200993,
+          9.246629075950443,
+          9.358696650739892,
+          9.468433183538382,
+          9.575912752654508,
+          9.681206178554152,
+          9.784381207090957,
+          9.885502680247413,
+          9.984632695382784,
+          10.08183075389355,
+          10.177153900110145
+        ]
+      },
+      "historical": [
+        {
+          "n": 20000,
+          "uplift": 0.05,
+          "n_treated": 9933,
+          "frequency_contrast": 0.07203477364098876,
+          "recency_contrast": 0.11141143401643383,
+          "monetary_contrast": 0.44589305405422763,
+          "paired_early_monetary_change": 0.16918193358765085,
+          "early_gain_per_treated": 0.46378900453418875,
+          "baseline_future_value": 51.782281166599816,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -0.8820781317089939,
+            "se": 1.7348769588153758
+          },
+          "continuing": {
+            "expected_effect": 2.589114058329991,
+            "realized_effect": 1.7296995610844021,
+            "se": 1.77613443447016
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.1,
+          "n_treated": 9942,
+          "frequency_contrast": 0.03628722070210433,
+          "recency_contrast": -0.03255100650998166,
+          "monetary_contrast": 0.5513891942181566,
+          "paired_early_monetary_change": 0.3615233093063339,
+          "early_gain_per_treated": 0.953953284323511,
+          "baseline_future_value": 51.6140476862206,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -1.5514007219498467,
+            "se": 1.7044822071654326
+          },
+          "continuing": {
+            "expected_effect": 5.16140476862206,
+            "realized_effect": 3.576295203717315,
+            "se": 1.786989814300594
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.2,
+          "n_treated": 9860,
+          "frequency_contrast": -0.027700429284139627,
+          "recency_contrast": -0.056560896001339955,
+          "monetary_contrast": 0.5475987656377903,
+          "paired_early_monetary_change": 0.7034965965397459,
+          "early_gain_per_treated": 1.843106483859443,
+          "baseline_future_value": 51.22003914235278,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -0.22982307228221543,
+            "se": 1.7934620788284341
+          },
+          "continuing": {
+            "expected_effect": 10.244007828470558,
+            "realized_effect": 9.834848792585142,
+            "se": 2.007736935427892
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.3,
+          "n_treated": 10003,
+          "frequency_contrast": -0.03777973340017593,
+          "recency_contrast": -0.03354350614906476,
+          "monetary_contrast": 0.587087063026253,
+          "paired_early_monetary_change": 0.9911423497164192,
+          "early_gain_per_treated": 2.5558939386008555,
+          "baseline_future_value": 50.484575683454445,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -1.246375942368232,
+            "se": 1.648168467845796
+          },
+          "continuing": {
+            "expected_effect": 15.145372705036333,
+            "realized_effect": 13.696056214370593,
+            "se": 1.9181613247244933
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.4,
+          "n_treated": 10034,
+          "frequency_contrast": 0.01524125618892147,
+          "recency_contrast": -0.039166922461676634,
+          "monetary_contrast": 1.636854973707134,
+          "paired_early_monetary_change": 1.3503816262817503,
+          "early_gain_per_treated": 3.672577313910704,
+          "baseline_future_value": 50.35581430890339,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": 0.49579374808023147,
+            "se": 1.669120569545394
+          },
+          "continuing": {
+            "expected_effect": 20.142325723561356,
+            "realized_effect": 20.428085886103275,
+            "se": 2.0020258373501134
+          },
+          "rfm_identical_between_durations": true
+        }
+      ]
+    },
+    {
+      "rep": 3,
+      "bg_parameters": {
+        "r": 0.7986986040108237,
+        "alpha": 3.9858258459622173,
+        "a": 2.4319683734683317,
+        "b": 7.744999209150055
+      },
+      "gg_parameters": {
+        "p": 6.033733949340613,
+        "q": 3.9899221845176505,
+        "v": 14.85369914339688
+      },
+      "calibration": {
+        "n": 200000,
+        "prediction": 51.842317457369326,
+        "expected": 51.666142809334005,
+        "realized": 51.45242299966432,
+        "relative_bias": 0.003409866470687861,
+        "bins": [
+          {
+            "prediction": 8.40315907343765,
+            "expected": 7.860883674265456,
+            "realized": 7.925708674916066,
+            "n": 20000
+          },
+          {
+            "prediction": 17.298479613320936,
+            "expected": 17.4585968458006,
+            "realized": 17.45483499536981,
+            "n": 20000
+          },
+          {
+            "prediction": 26.48464852309866,
+            "expected": 26.611795530339553,
+            "realized": 26.477583167065376,
+            "n": 20000
+          },
+          {
+            "prediction": 36.36278977756984,
+            "expected": 36.32161816767061,
+            "realized": 36.16522357742114,
+            "n": 20000
+          },
+          {
+            "prediction": 39.49365548322522,
+            "expected": 39.87242808405806,
+            "realized": 39.507546744178335,
+            "n": 20000
+          },
+          {
+            "prediction": 39.49365548322522,
+            "expected": 39.56642658133191,
+            "realized": 39.430416115800305,
+            "n": 20000
+          },
+          {
+            "prediction": 41.00865016503398,
+            "expected": 41.199387710231335,
+            "realized": 41.40498501990829,
+            "n": 20000
+          },
+          {
+            "prediction": 54.12843029170607,
+            "expected": 54.08490345164444,
+            "realized": 53.71562086203152,
+            "n": 20000
+          },
+          {
+            "prediction": 79.02986522462096,
+            "expected": 78.03071547414838,
+            "realized": 77.89387253921853,
+            "n": 20000
+          },
+          {
+            "prediction": 176.71984093845472,
+            "expected": 175.6546725738498,
+            "realized": 174.54843830073386,
+            "n": 20000
+          }
+        ]
+      },
+      "experiment": {
+        "n": 50000,
+        "uplift": 0.2,
+        "n_treated": 24924,
+        "frequency_contrast": -0.025972425626768825,
+        "recency_contrast": -0.0908625048884728,
+        "monetary_contrast": 0.6305942830667064,
+        "paired_early_monetary_change": 0.7012980707972628,
+        "early_gain_per_treated": 1.8503956051959443,
+        "baseline_future_value": 51.56361209674355,
+        "temporary": {
+          "expected_effect": 0.0,
+          "realized_effect": -0.6337098805008878,
+          "se": 1.124775052943324
+        },
+        "continuing": {
+          "expected_effect": 10.31272241934871,
+          "realized_effect": 9.668457663434609,
+          "se": 1.2372923439212624
+        },
+        "rfm_identical_between_durations": true,
+        "score_effect": 1.648256502029298,
+        "paired_score_effect": 1.6942427924709902,
+        "score_se": 0.5219787493946141,
+        "baseline_score_imbalance": -0.04099761694001103,
+        "contract_temporary_effect": -0.04099761694001103,
+        "contract_continuing_effect": 10.286905318832645,
+        "paired_contract_continuing_effect": 10.332015160742198,
+        "paired_contract_temporary_effect": 0.0,
+        "example_histories": [
+          {
+            "frequency": 5.0,
+            "recency": 14.952873962573129,
+            "age": 16.0,
+            "base_monetary": 11.859646915956425,
+            "early_orders": 2.0,
+            "changed_monetary": 12.595738022482854,
+            "base_ltv": 62.83551166777267,
+            "changed_ltv": 65.95428814401087
+          },
+          {
+            "frequency": 2.0,
+            "recency": 14.988399214765229,
+            "age": 16.0,
+            "base_monetary": 18.470764164794847,
+            "early_orders": 1.0,
+            "changed_monetary": 19.90234269013201,
+            "base_ltv": 56.2215431351295,
+            "changed_ltv": 59.329379811994954
+          },
+          {
+            "frequency": 4.0,
+            "recency": 12.897725463370707,
+            "age": 16.0,
+            "base_monetary": 26.051576518833368,
+            "early_orders": 1.0,
+            "changed_monetary": 27.562719287767152,
+            "base_ltv": 92.00338901954605,
+            "changed_ltv": 96.6743196407524
+          },
+          {
+            "frequency": 1.0,
+            "recency": 14.726916870645816,
+            "age": 16.0,
+            "base_monetary": 27.83651047709867,
+            "early_orders": 1.0,
+            "changed_monetary": 33.403812572518405,
+            "base_ltv": 54.20293793474978,
+            "changed_ltv": 61.27163430857036
+          },
+          {
+            "frequency": 2.0,
+            "recency": 15.29008888188076,
+            "age": 16.0,
+            "base_monetary": 84.16220069512158,
+            "early_orders": 1.0,
+            "changed_monetary": 93.93654114228423,
+            "base_ltv": 200.944032914955,
+            "changed_ltv": 222.38868577263574
+          }
+        ],
+        "value_curve": [
+          0.0,
+          0.4115583397172503,
+          0.8051287711476685,
+          1.1819893865681508,
+          1.5432892372211287,
+          1.8900655950104106,
+          2.223258260138739,
+          2.543721540199815,
+          2.8522343699615433,
+          3.1495089285180917,
+          3.4361980285252316,
+          3.7129014918516803,
+          3.9801716809530583,
+          4.238518321279876,
+          4.488412724041957,
+          4.730291498537844,
+          4.964559827504759,
+          5.191594366467272,
+          5.4117458180745555,
+          5.625341224342356,
+          5.832686013130831,
+          6.034065829775305,
+          6.229748180302929,
+          6.41998390893011,
+          6.605008529401092,
+          6.785043427085599,
+          6.960296946515574,
+          7.130965377137328,
+          7.297233848429824,
+          7.459277144146746,
+          7.617260444242259,
+          7.7713400020073315,
+          7.9216637630502875,
+          8.068371931980387,
+          8.21159749197994,
+          8.351466681863503,
+          8.488099434710179,
+          8.621609781706404,
+          8.752106224443045,
+          8.879692078564819,
+          9.004465791365416,
+          9.126521235653039,
+          9.245947981973538,
+          9.362831551067966,
+          9.477253648254932,
+          9.589292381262316,
+          9.699022462885434,
+          9.806515399717268,
+          9.911839668079072,
+          10.015060878174616,
+          10.116241927397482,
+          10.215443143636488,
+          10.31272241934871
+        ]
+      },
+      "historical": [
+        {
+          "n": 20000,
+          "uplift": 0.05,
+          "n_treated": 9927,
+          "frequency_contrast": -0.025316919138620886,
+          "recency_contrast": -0.03502280155301829,
+          "monetary_contrast": 0.4357825036662213,
+          "paired_early_monetary_change": 0.17064768317374152,
+          "early_gain_per_treated": 0.45756117657100365,
+          "baseline_future_value": 51.119665746987195,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -0.2470044291572151,
+            "se": 1.740276578993786
+          },
+          "continuing": {
+            "expected_effect": 2.5559832873493598,
+            "realized_effect": 2.367589983133513,
+            "se": 1.7866161448663567
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.1,
+          "n_treated": 9951,
+          "frequency_contrast": -0.01564044552709709,
+          "recency_contrast": -0.14459245718573577,
+          "monetary_contrast": 0.287538972888278,
+          "paired_early_monetary_change": 0.34218128285323696,
+          "early_gain_per_treated": 0.8954098452289584,
+          "baseline_future_value": 51.032821914165204,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -2.113347202213262,
+            "se": 1.5546627701193654
+          },
+          "continuing": {
+            "expected_effect": 5.103282191416521,
+            "realized_effect": 2.742235009078648,
+            "se": 1.6270561484505741
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.2,
+          "n_treated": 10005,
+          "frequency_contrast": -0.0205230551307638,
+          "recency_contrast": -0.017343759451238228,
+          "monetary_contrast": 0.9621227230686564,
+          "paired_early_monetary_change": 0.7052046871507665,
+          "early_gain_per_treated": 1.8767928122162987,
+          "baseline_future_value": 51.768553144171214,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -0.909605595187962,
+            "se": 1.7420780453742313
+          },
+          "continuing": {
+            "expected_effect": 10.353710628834243,
+            "realized_effect": 9.500910510625012,
+            "se": 1.9039967730454086
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.3,
+          "n_treated": 10014,
+          "frequency_contrast": -0.012619404734033335,
+          "recency_contrast": 0.034772247468980666,
+          "monetary_contrast": 1.0670779842222906,
+          "paired_early_monetary_change": 1.033531408561063,
+          "early_gain_per_treated": 2.7587972066288238,
+          "baseline_future_value": 50.95945177974433,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": 2.0163200586359338,
+            "se": 1.6360955984025847
+          },
+          "continuing": {
+            "expected_effect": 15.287835533923298,
+            "realized_effect": 17.59663636272729,
+            "se": 1.909836213360444
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.4,
+          "n_treated": 10032,
+          "frequency_contrast": -0.056906182719310916,
+          "recency_contrast": -0.16917894986166626,
+          "monetary_contrast": 1.1059812340574418,
+          "paired_early_monetary_change": 1.4434333066146798,
+          "early_gain_per_treated": 3.6270494565062346,
+          "baseline_future_value": 52.00500446549817,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -0.8373729036697384,
+            "se": 1.7401647616550744
+          },
+          "continuing": {
+            "expected_effect": 20.80200178619927,
+            "realized_effect": 19.653433129336136,
+            "se": 2.1335532817692835
+          },
+          "rfm_identical_between_durations": true
+        }
+      ]
+    },
+    {
+      "rep": 4,
+      "bg_parameters": {
+        "r": 0.7966470600922977,
+        "alpha": 3.9926270115969227,
+        "a": 2.4873899583825376,
+        "b": 7.940159834274368
+      },
+      "gg_parameters": {
+        "p": 6.006948155976238,
+        "q": 3.9957607686422127,
+        "v": 14.968773671000339
+      },
+      "calibration": {
+        "n": 200000,
+        "prediction": 51.38857856485477,
+        "expected": 51.42123057415935,
+        "realized": 51.589816595894845,
+        "relative_bias": -0.0006349908187727182,
+        "bins": [
+          {
+            "prediction": 8.42205841226292,
+            "expected": 8.417287445270592,
+            "realized": 8.534747615893705,
+            "n": 20000
+          },
+          {
+            "prediction": 17.392596710969872,
+            "expected": 17.926457005660357,
+            "realized": 17.77650133112752,
+            "n": 20000
+          },
+          {
+            "prediction": 26.60213727505295,
+            "expected": 26.745293593843712,
+            "realized": 26.39194654747481,
+            "n": 20000
+          },
+          {
+            "prediction": 36.39739029470718,
+            "expected": 36.945588539185756,
+            "realized": 37.21339831253294,
+            "n": 20000
+          },
+          {
+            "prediction": 39.447429110512005,
+            "expected": 39.3625948348455,
+            "realized": 39.309592704464556,
+            "n": 20000
+          },
+          {
+            "prediction": 39.447429110512005,
+            "expected": 39.75515520961392,
+            "realized": 39.93969341228553,
+            "n": 20000
+          },
+          {
+            "prediction": 41.012939700778716,
+            "expected": 40.904322737786615,
+            "realized": 41.1303168722569,
+            "n": 20000
+          },
+          {
+            "prediction": 54.08654851103642,
+            "expected": 53.34154515261144,
+            "realized": 53.71760565374668,
+            "n": 20000
+          },
+          {
+            "prediction": 78.71926657253161,
+            "expected": 78.75450729862267,
+            "realized": 77.95681247066373,
+            "n": 20000
+          },
+          {
+            "prediction": 172.35798995018402,
+            "expected": 172.05955392415297,
+            "realized": 173.92755103850214,
+            "n": 20000
+          }
+        ]
+      },
+      "experiment": {
+        "n": 50000,
+        "uplift": 0.2,
+        "n_treated": 25218,
+        "frequency_contrast": 0.015616589060445607,
+        "recency_contrast": 0.017874397379263662,
+        "monetary_contrast": 0.8372474742300398,
+        "paired_early_monetary_change": 0.6952221589738377,
+        "early_gain_per_treated": 1.8510609904445499,
+        "baseline_future_value": 51.81105538086844,
+        "temporary": {
+          "expected_effect": 0.0,
+          "realized_effect": -0.5780442241072095,
+          "se": 1.0618339237447894
+        },
+        "continuing": {
+          "expected_effect": 10.362211076173688,
+          "realized_effect": 9.654426528992786,
+          "se": 1.1744728804381068
+        },
+        "rfm_identical_between_durations": true,
+        "score_effect": 1.4551424003021154,
+        "paired_score_effect": 1.676289181748231,
+        "score_se": 0.5100459481016187,
+        "baseline_score_imbalance": -0.22716264283135246,
+        "contract_temporary_effect": -0.22716264283135246,
+        "contract_continuing_effect": 10.07573834153839,
+        "paired_contract_continuing_effect": 10.32541916282833,
+        "paired_contract_temporary_effect": 0.0,
+        "example_histories": [
+          {
+            "frequency": 2.0,
+            "recency": 12.266677149883346,
+            "age": 16.0,
+            "base_monetary": 57.591737436014874,
+            "early_orders": 1.0,
+            "changed_monetary": 60.60168582040485,
+            "base_ltv": 124.25391065745639,
+            "changed_ltv": 130.0009931984683
+          },
+          {
+            "frequency": 1.0,
+            "recency": 14.845699211953946,
+            "age": 16.0,
+            "base_monetary": 27.537333284371446,
+            "early_orders": 1.0,
+            "changed_monetary": 33.044799941245735,
+            "base_ltv": 53.928217088662414,
+            "changed_ltv": 60.91563322141534
+          },
+          {
+            "frequency": 5.0,
+            "recency": 14.290624562734756,
+            "age": 16.0,
+            "base_monetary": 18.887533225188815,
+            "early_orders": 2.0,
+            "changed_monetary": 20.641613707703574,
+            "base_ltv": 87.48981738559004,
+            "changed_ltv": 94.50330678254281
+          },
+          {
+            "frequency": 2.0,
+            "recency": 13.661749301155755,
+            "age": 16.0,
+            "base_monetary": 26.666428950996835,
+            "early_orders": 2.0,
+            "changed_monetary": 31.9997147411962,
+            "base_ltv": 69.97702263940404,
+            "changed_ltv": 80.90523773143579
+          },
+          {
+            "frequency": 1.0,
+            "recency": 14.504722166540855,
+            "age": 16.0,
+            "base_monetary": 48.99849988912066,
+            "early_orders": 1.0,
+            "changed_monetary": 58.798199866944785,
+            "base_ltv": 80.46248584739013,
+            "changed_ltv": 92.78923008533623
+          }
+        ],
+        "value_curve": [
+          0.0,
+          0.4165112271218301,
+          0.814433572598256,
+          1.1951374168946176,
+          1.5598470166567235,
+          1.90966119188177,
+          2.2455703867967345,
+          2.568470844629527,
+          2.879176468875512,
+          3.1784288167481876,
+          3.466905573914341,
+          3.745227785724875,
+          4.013966063323755,
+          4.273645939065982,
+          4.5247525114876685,
+          4.767734493321331,
+          5.0030077549936705,
+          5.23095843936861,
+          5.451945710213023,
+          5.6663041862128365,
+          5.874346103778847,
+          6.076363244913943,
+          6.272628660727925,
+          6.46339821652005,
+          6.648911980499055,
+          6.829395475015982,
+          7.005060806521275,
+          7.176107688225442,
+          7.342724367563015,
+          7.505088468970026,
+          7.6633677611351345,
+          7.817720856733229,
+          7.9682978516645875,
+          8.115240909975912,
+          8.258684799909254,
+          8.398757385893354,
+          8.535580080743715,
+          8.669268261860875,
+          8.799931654799993,
+          8.927674687220629,
+          9.052596815906007,
+          9.174792829260067,
+          9.2943531274428,
+          9.411363982085675,
+          9.525907777335048,
+          9.638063233799798,
+          9.747905616826523,
+          9.85550693038977,
+          9.960936097763344,
+          10.06425913003043,
+          10.16553928339316,
+          10.264837206155299,
+          10.362211076173688
+        ]
+      },
+      "historical": [
+        {
+          "n": 20000,
+          "uplift": 0.05,
+          "n_treated": 10017,
+          "frequency_contrast": -0.008450924423171413,
+          "recency_contrast": 0.07976953176177215,
+          "monetary_contrast": 0.30812567316118944,
+          "paired_early_monetary_change": 0.178750158294745,
+          "early_gain_per_treated": 0.464111671096119,
+          "baseline_future_value": 50.76028625522944,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -0.290935289624322,
+            "se": 1.5840995579400934
+          },
+          "continuing": {
+            "expected_effect": 2.5380143127614723,
+            "realized_effect": 2.1840378727440353,
+            "se": 1.6235844793643814
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.1,
+          "n_treated": 9991,
+          "frequency_contrast": -0.0024172519579741536,
+          "recency_contrast": 0.011145772491844674,
+          "monetary_contrast": 0.2807369362614516,
+          "paired_early_monetary_change": 0.342061796945484,
+          "early_gain_per_treated": 0.944864563320694,
+          "baseline_future_value": 50.80098949323037,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -0.270400821002049,
+            "se": 1.5886421362584269
+          },
+          "continuing": {
+            "expected_effect": 5.0800989493230375,
+            "realized_effect": 4.734748521751349,
+            "se": 1.6674869808513642
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.2,
+          "n_treated": 9971,
+          "frequency_contrast": 0.03212210014686212,
+          "recency_contrast": -0.008298619403329432,
+          "monetary_contrast": 1.0127509207276049,
+          "paired_early_monetary_change": 0.7006926433360525,
+          "early_gain_per_treated": 1.8496575774799286,
+          "baseline_future_value": 51.68696416192268,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -0.566397821288362,
+            "se": 1.8712102424569597
+          },
+          "continuing": {
+            "expected_effect": 10.337392832384538,
+            "realized_effect": 9.658577842333912,
+            "se": 2.0811226452664084
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.3,
+          "n_treated": 9910,
+          "frequency_contrast": 0.0459903252163425,
+          "recency_contrast": 0.017383237271828555,
+          "monetary_contrast": 0.9155744869328437,
+          "paired_early_monetary_change": 1.0396466876629122,
+          "early_gain_per_treated": 2.828258593248644,
+          "baseline_future_value": 51.1926495371692,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": -0.14613955867950779,
+            "se": 1.6243719805775918
+          },
+          "continuing": {
+            "expected_effect": 15.35779486115076,
+            "realized_effect": 15.188178040770744,
+            "se": 1.888144530249067
+          },
+          "rfm_identical_between_durations": true
+        },
+        {
+          "n": 20000,
+          "uplift": 0.4,
+          "n_treated": 9960,
+          "frequency_contrast": 0.02857885726171605,
+          "recency_contrast": 0.028435771103443308,
+          "monetary_contrast": 1.424662572515789,
+          "paired_early_monetary_change": 1.383199949838284,
+          "early_gain_per_treated": 3.7141062924608863,
+          "baseline_future_value": 50.115886671375904,
+          "temporary": {
+            "expected_effect": 0.0,
+            "realized_effect": 2.04456074604542,
+            "se": 1.7004274325082183
+          },
+          "continuing": {
+            "expected_effect": 20.046354668550364,
+            "realized_effect": 22.715800146266986,
+            "se": 2.116689557794561
+          },
+          "rfm_identical_between_durations": true
+        }
+      ]
+    }
+  ]
+}

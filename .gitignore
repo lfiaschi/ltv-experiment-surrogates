@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.env
+.env.*
+results/*.partial.json
+figures/*-generated.*
+.DS_Store
+.ruff_cache/

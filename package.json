@@ -1,0 +1,16 @@
+{
+  "name": "ltv-experiment-surrogates",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reproduce a classical LTV experiment and its scientific figures",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "figures": "node scripts/generate-figures.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
+}
